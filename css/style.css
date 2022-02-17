@@ -1,0 +1,167 @@
+/* Setting Typefaces */
+@font-face {
+    font-family: Inter;
+    src: url(../font/Inter-VariableFont_slnt,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url(../font/Nunito-Bold.ttf);
+}
+
+body {
+    font-family: Inter, 'Nunito-Bold';
+    font-weight: 700;
+    color: #333;
+}
+
+.table {
+    background-color: rgba(156, 244, 194, 1);
+    border-color: transparent;
+    font-family: Inter;
+    font-weight: normal;
+}
+
+/* Setting Components */
+.dropdown-menu {
+
+    background-color: rgba(11, 173, 81, 1);
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    color: rgba(252, 246, 96, 1);
+    background-color: rgba(11, 173, 81, 1);
+}
+
+.bg-success {
+    background-color: rgba(16, 195, 93, 1) !important;
+    color: white;
+}
+
+.bg-success:focus {
+    color: rgba(252, 246, 96, 1);
+    box-shadow: 0 0 0 0.25rem rgba(16, 195, 93, 0.5);
+
+}
+
+.bg-success:hover {
+    color: rgba(252, 246, 96, 1);
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.nav-link:hover {
+    color: rgba(252, 246, 96, 1) !important;
+}
+
+.nav-link:focus {
+    color: rgba(252, 246, 96, 1) !important;
+}
+
+.font-judul {
+    font-family: 'Nunito-Bold';
+    font-size: 36px;
+}
+
+.tittle-prof {
+    font-size: 21px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.shadow-cust {
+    box-shadow: 6px 8px 15px 5px rgba(0, 0, 0, 0.06);
+}
+
+.btn-round {
+    width: 164px;
+    height: 164px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.col-4>ul.list-unstyled>li {
+    width: 164px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.col-12>.row>.col-3 {
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+.col-3>ul.list-unstyled>a {
+    width: 164px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.col-3>ul.list-unstyled {
+    width: 164px;
+
+}
+
+.btn-petronas {
+    background-color: #9CF4C2 !important;
+}
+
+.btn-repsol {
+    background-color: #FFE871 !important;
+}
+
+.bg-footer {
+    background-color: #F4F4F4;
+    color: #d0d0d0;
+    height: 60px;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.alert-success {
+    background-color: #E2FFEE;
+    color: #10C35D;
+    border: none;
+}
+
+.text-kuesioner {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+div.form-floating>.form-control {
+    border-radius: 10px;
+    border: 3px solid #939393;
+    font-weight: 500;
+}
+
+div.form-floating>.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(16, 195, 93, 0.25);
+    border-color: rgba(16, 195, 93, 1);
+    /* color: rgba(16, 195, 93, 1); */
+}
+
+.label-float {
+    color: #939393;
+}
+
+.btn-polnes {
+    background-color: #10C35D;
+    color: white;
+}
+
+.btn-polnes:hover {
+    color: #FCF660;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Nilai Per Semester</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="index.html"><img src="image/icon/Logo_polnes.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item d-flex align-self-center">
+            <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item dropdown d-flex align-self-center">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Akademik
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="nilai.html">Nilai Per Semester</a></li>
+              <li><a class="dropdown-item" href="#">Absensi</a></li>
+              <li><a class="dropdown-item" href="jadwal.html">Jadwal Perkuliahan</a></li>
+              <li><a class="dropdown-item" href="#">Entri SKPI</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-flex align-self-center">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Kuesioner
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="kuesioner.html">Kuesioner Teori</a></li>
+              <li><a class="dropdown-item" href="kuesioner.html">Kuesioner Praktikum</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-flex align-self-center">
+            <a class="nav-link p-0" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="image/profil/Fariz.jpg" alt="" class="rounded-circle" width="44" height="44">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Muhammad Farid Rofiqullah Al-Hariri (17665068)</a></li>
+              <li><a class="dropdown-item" href="ubah.html">Ubah Password</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- content -->
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-6">
+        <span class="font-judul">Nilai Per Semester</span>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3" style="width: 135px;">
+        <ul class="list-unstyled">
+          <li>NIM</li>
+          <li class="mt-2">Nama</li>
+          <li class="mt-2">Program Studi</li>
+          <li class="mt-2">Semester</li>
+        </ul>
+      </div>
+      <div class="col-1" style="width: 10px;">
+        <ul class="list-unstyled">
+          <li>:</li>
+          <li class="mt-2">:</li>
+          <li class="mt-2">:</li>
+          <li class="mt-2">:</li>
+        </ul>
+      </div>
+      <div class="col-5">
+        <ul class="list-unstyled">
+          <li>17665059</li>
+          <li class="mt-2">Fariz Luthfi Faudzan</li>
+          <li class="mt-2">D4-Teknik Informatika Multimedia</li>
+          <li class="mt-2">5 (Lima)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <!-- Example single danger button -->
+        <div class="btn-group">
+          <button type="button" class="btn bg-success dropdown-toggle" id="btn" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Semester 1
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item select" id="semester1" href="#">Semester 1</a></li>
+            <li><a class="dropdown-item select" id="semester2" href="#">Semester 2</a></li>
+            <li><a class="dropdown-item select" id="semester3" href="#">Semester 3</a></li>
+            <li><a class="dropdown-item select" id="semester4" href="#">Semester 4</a></li>
+            <li><a class="dropdown-item select" id="semester5" href="#">Semester 5</a></li>
+            <li><a class="dropdown-item select" id="semester6" href="#">Semester 6</a></li>
+            <li><a class="dropdown-item select" id="semester7" href="#">Semester 7</a></li>
+            <li><a class="dropdown-item select" id="semester8" href="#">Semester 8</a></li>
+          </ul>
+        </div>
+        <div class="alert alert-success mt-4" id="alert">
+          Masukkan Pilihan Semester
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-8">
+        <table class="table table-striped" id="table" style="visibility: hidden;">
+          <thead style="background-color: rgba(16, 195, 93, 1) !important; color: white;">
+            <tr>
+              <th scope="col" width="10%">No.</th>
+              <th scope="col" width="70%">Mata Kuliah</th>
+              <th scope="col" width="20%">Nilai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">1</td>
+              <td>Desain Web (Teori)</td>
+              <td>B+</td>
+            </tr>
+            <tr>
+              <td scope="row">2</td>
+              <td>Kecerdasan Buatan(Teori)</td>
+              <td>B-</td>
+            </tr>
+            <tr>
+              <td scope="row">3</td>
+              <td>Pemodelan & Simulasi (Praktikum)</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td scope="row">4</td>
+              <td>Desain Web(Praktikum)</td>
+              <td>Belum isi kuesioner</td>
+            </tr>
+            <tr>
+              <td scope="row">5</td>
+              <td>Kesehatan dan keselamatan kerja</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td scope="row">6</td>
+              <td>Kecerdasan Buatan(Praktikum)</td>
+              <td>B-</td>
+            </tr>
+            <tr>
+              <td scope="row">2</td>
+              <td>Pemodelan & Simulasi(Teori)</td>
+              <td>B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-footer d-flex justify-content-center fixed-bottom">
+    <span>Sistem Informasi Akademik Politeknik Negeri Samarinda | 2021</span>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("semester1").addEventListener("click", changeColor1);
+    let alert = "not done yet";
+    function changeColor1() {
+      document.getElementById("btn").innerHTML = "Semester 1";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+    }
+    document.getElementById("semester2").addEventListener("click", changeColor2);
+    function changeColor2() {
+      document.getElementById("btn").innerHTML = "Semester 2";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+    }
+    document.getElementById("semester3").addEventListener("click", changeColor3);
+    function changeColor3() {
+      document.getElementById("btn").innerHTML = "Semester 3";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+    }
+    document.getElementById("semester4").addEventListener("click", changeColor4);
+    function changeColor4() {
+      document.getElementById("btn").innerHTML = "Semester 4";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+
+
+    }
+    document.getElementById("semester5").addEventListener("click", changeColor5);
+    function changeColor5() {
+      document.getElementById("btn").innerHTML = "Semester 5";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+
+
+    }
+    document.getElementById("semester6").addEventListener("click", changeColor6);
+    function changeColor6() {
+      document.getElementById("btn").innerHTML = "Semester 6";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+
+
+    }
+    document.getElementById("semester7").addEventListener("click", changeColor7);
+    function changeColor7() {
+      document.getElementById("btn").innerHTML = "Semester 7";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+
+
+    }
+    document.getElementById("semester8").addEventListener("click", changeColor8);
+    function changeColor8() {
+      document.getElementById("btn").innerHTML = "Semester 8";
+      document.getElementById("table").style.visibility = "visible";
+      if (alert != "done") {
+        alert = document.getElementById("alert");
+        alert.remove();
+      }
+      alert = "done";
+    }
+  </script>
+</body>
+
+</html>

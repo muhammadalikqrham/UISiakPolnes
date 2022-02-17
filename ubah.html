@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jadwal Perkuliahan</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3" href="index.html"><img src="image/icon/Logo_polnes.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex align-self-center">
+                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-self-center">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Akademik
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="nilai.html">Nilai Per Semester</a></li>
+                            <li><a class="dropdown-item" href="#">Absensi</a></li>
+                            <li><a class="dropdown-item" href="jadwal.html">Jadwal Perkuliahan</a></li>
+                            <li><a class="dropdown-item" href="#">Entri SKPI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-self-center">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Kuesioner
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="kuesioner.html">Kuesioner Teori</a></li>
+                            <li><a class="dropdown-item" href="kuesioner.html">Kuesioner Praktikum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-self-center">
+                        <a class="nav-link p-0" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="image/profil/Fariz.jpg" alt="" class="rounded-circle" width="44" height="44">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Muhammad Farid Rofiqullah Al-Hariri (17665068)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="ubah.html">Ubah Password</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row d-flex justify-content-center" style="margin-top: 18%;">
+            <div class="col-lg-6 card shadow text-center">
+                <span class="font-judul text-center mt-5">Reset Password Akun SIAK</span>
+                <div class="form-floating mb-3 mt-5 mx-4">
+                    <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        onchange="colorStayInput()">
+                    <label for="floatingInput" class="label-float">Password Baru</label>
+                </div>
+                <div class="form-floating mx-4 mt-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                        onchange="colorStayPassword()">
+                    <label for="floatingPassword" class="label-float">Ketik Ulang Password Baru</label>
+                </div>
+                <a href="#" class="btn btn-polnes mx-4 my-4" style="font-size: 20px; border-radius: 10px;">Reset</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-footer d-flex justify-content-center fixed-bottom">
+        <span>Sistem Informasi Akademik Politeknik Negeri Samarinda | 2021</span>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function colorStayInput() {
+            let x = document.getElementById("floatingInput").value;
+            if (x.length > 0) {
+                document.getElementById("floatingInput").style.color = "#10C35D";
+                document.getElementById("floatingInput").style.borderColor = "#10C35D";
+            } else {
+                document.getElementById("floatingInput").style.borderColor = "#939393";
+            }
+        }
+        function colorStayPassword() {
+            let x = document.getElementById("floatingPassword").value;
+            if (x.length > 0) {
+                document.getElementById("floatingPassword").style.color = "#10C35D";
+                document.getElementById("floatingPassword").style.borderColor = "#10C35D";
+            } else {
+                document.getElementById("floatingPassword").style.borderColor = "#939393";
+            }
+        }
+    </script>
+</body>
+
+</html>
